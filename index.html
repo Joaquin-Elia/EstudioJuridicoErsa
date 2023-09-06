@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Estudio Juridico EYS</title>
+</head>
+<body id="inicio">
+    <div class="max-width">
+        <header class="header">
+                <a href="/">
+                    <img 
+                        class="header-logo"
+                        src="./assets/logo.jpg" 
+                        alt="Logo Erreguerena y Sabalua"
+                    >
+                </a>
+        
+                <nav class="header-nav">
+                    <button class="header-close" id="closeBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+                          </svg>
+                    </button>
+                    <ul class="header-list">
+                        <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                        <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                        <li><a href="#" class="nav-link">Nosotros</a></li>
+                        <li><a href="#" class="nav-link">Contacto</a></li>
+                    </ul>
+                </nav>
+                <button class="header-hamburger" id="hamburgerBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
+                </button>
+        </header>
+    </div>
+
+    <main>
+        <section class="home">
+            <div class="home-info">
+                <h1 class="home-title">
+                    <span>Estudio Juridico</span> 
+                    Erreguerena y Sabalua
+                </h1>
+                <div>
+                    <p class="home-description">
+                        <!-- Brindamos asesoramiento personalizado para situaciones como 
+                        accidentes de trabajo, despidos, sucesiones, contratos y otras necesidades legales
+                     -->
+                     <!--  -->
+                     Somos un equipo de abogados con amplia experiencia y formación.
+                     Brindamos asesoramiento y representación para problemas legales en Azul y la zona.
+                    </p>
+                    <button class="home-btn">
+                        Agenda una entrevista
+                    </button>
+                </div>
+            </div>
+            <img 
+                class="home-image"
+                src="./assets/estudioJuridicoHome.jpeg" 
+                alt=""
+            >
+        </section>
+        
+        <section id="servicios">
+            <h2 class="services-title">Nuestros servicios</h2>
+            <div class="services">
+                <div class="services-card">
+                    <div>
+                        <h3 class="services-card-title">Despidos</h3>
+                        <p class="services-card-p">
+                            Si usted ha sido despedido injustamente o sin causa, 
+                            tiene derecho a reclamar una indemnización por despido.
+                        </p>
+                    </div>
+                    <img 
+                        class="services-card-img"
+                        src="./assets/despido.jpg" 
+                        alt="Despidos"
+                    >
+                </div>
+                <div class="services-card">
+                    <div>
+                        <h3 class="services-card-title">Accidentes de transito</h3>
+                        <p class="services-card-p">
+                            Si sufriste un accidente de tránsito por culpa de otro conductor, 
+                            podes reclamar una indemnización por los daños y perjuicios sufridos.
+                        </p>
+                    </div>
+                    <img
+                        class="services-card-img"
+                        src="./assets/accidenteTransito.jpg" 
+                        alt="Despidos"
+                    >
+                </div>
+                <div class="services-card">
+                    <div>
+                        <h3 class="services-card-title">Accidentes de trabajo</h3>
+                        <p class="services-card-p">
+                            Si tuviste un accidente durante el desempeño de la actividad laboral 
+                            o en el trayecto al trabajo, podes pedir una prestación por incapacidad 
+                            y una indemnización por los daños.
+                        </p>
+                    </div>
+                    <img 
+                        class="services-card-img"
+                        src="./assets/accidenteTrabajo.jpg" 
+                        alt="Accidentes de trabajo"
+                    >
+                </div>
+                <div class="services-card">
+                    <div>
+                        <h3 class="services-card-title">Sucesiones</h3>
+                        <p class="services-card-p">
+                            El trámite sucesorio es indispensable para que los herederos puedan
+                            disponer libremente de los bienes y distribuir, en su caso, los que haya
+                            dejado el causante.
+                        </p>
+                    </div>
+                    <img 
+                        class="services-card-img"
+                        src="./assets/sucesión.jpg" 
+                        alt="Sucesiones"
+                    >
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>

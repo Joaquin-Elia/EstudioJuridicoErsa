@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+/* variables */
+:root {
+    /* colors */
+    --first-color: #F0C306;
+    --dark-color: #0C0A0B;
+    --light-color: #fcf7fa;
+    
+    /* typography */
+    --principal-typo: 'DM Sans', sans-serif;
+}
+
+/* dark mode */ 
+/* @media (prefers-color-scheme: dark) {
+    :root{
+        --primary-color: #491FE5;
+        --secondary-color: #F3BA0A;
+    }
+} */
+/* high contrast */
+/* @media (prefers-contrast: high ) {
+    :root{
+        --primary-color: #3700ff;
+        --secondary-color: yellow;
+    }
+} */
+
+/* reset  */
+html, body, div, span, iframe,
+h1, h2, h3, h4, h5, h6, p, a, img,
+small, strong, i, ol, ul, li, button,
+fieldset, form, label, legend,
+article, aside, figure,  footer, 
+header, nav, section, video, svg, path {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+img, video, iframe, picture, figure{
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    display: block;
+}
+
+p a {
+    display: inline;
+}
+
+li {
+    list-style-type: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, span, strong, i {
+    font-size: 1em;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    color: inherit;
+}
+
+::selection{
+    background-color: var(--first-color);
+    color: var(--dark-color);
+}
+
+form, input , textarea, select, button, label {
+    font-family: inherit;
+    font-size: inherit;
+    hyphens: auto;
+    background-color: transparent;
+    display: block;
+    color: inherit;
+}
+
+svg {
+    width: 100%;
+    display: block;
+    fill: currentColor;
+}
+body {
+    min-height: 100vh;
+    font-size: 100%;
+    font-family: var(--principal-typo);
+    color: var(--dark-color);
+    background-color: var(--light-color);
+    /* hyphens: auto; */
+}
+.header, main{
+    max-width: 105rem;
+    margin: auto;
+}
