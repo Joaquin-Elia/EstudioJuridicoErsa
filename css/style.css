@@ -97,6 +97,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin-bottom: 1rem;
     gap: 1.5rem;
     letter-spacing: -.5px;
 }
@@ -128,7 +129,64 @@
 .services-card-img{
     margin-bottom:.5rem;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
+}
+/* calculators */
+.calculators-container{
+    background-color: var(--dark-color);
+    color: #fff;
+    width: 90%;
+    padding: 1rem .5rem 2rem .5rem;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btn-show-calulator{
+    width: 95%;
+    padding: .45rem;
+    margin: .3rem 0;
+    font-size: .85em;
+    border-radius: 1rem;
+    font-weight: 700;
+    text-align: start;
+    color: var(--light-color);
+    border: 1px solid var(--light-color);
+    background-color: transparent;
+    transition: .2s ease-in;
+}
+.btn-calc-active {
+    border: transparent;
+    background-color: var(--first-color);
+    color: var(--dark-color);
+}
+#calculatorTraffic, #calculatorWork, #calculatorDismissal {
+    display: none;
+}
+#calculatorTraffic.calculator-active, 
+#calculatorWork.calculator-active,
+#calculatorDismissal.calculator-active {
+    display: block;
+    margin: 1rem 0;
+}
+input{
+    outline: none;
+    border: none;
+    border-radius: .4rem;
+    height: 2.8rem;
+    margin: 1rem;
+    width: 80vw;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    font-size: .9em;
+    font-weight: 700;
+}
+input::placeholder{
+    color: #4d4d4d;
+    font-size: .95em;
+    font-weight: 700;
+    padding: 0 .7rem;
 }
 
 @media (min-width: 21rem) {
@@ -137,7 +195,6 @@
     }
     .header-close {
         right: .8rem;
-        top: 1.5rem;
     }
     .home{
         margin: 1.5rem .8rem 0 .8rem;
@@ -209,7 +266,11 @@
     }
     .header-close {
         right: 1.5rem;
-        top: 2rem;
+        top: 1rem;
+    }
+    .header-list{
+        gap: 3rem;
+        font-weight: 700;
     }
     .home{
         margin: 1.5rem 1.5rem 0 1.5rem;
@@ -301,8 +362,6 @@
     .header-list {
         font-size: 1.1em;
         color: #343434;
-        /* gap: 2rem; */
-        font-weight: 700;
     }
     .home{
         margin: 2.5rem 2rem 0 2rem;
@@ -332,6 +391,11 @@
     }
     .services-title{
         margin: 4rem 2rem;
+        font-size: 2.5em;
+        letter-spacing: -1px;
+    }
+    .services-card{
+        width: 18rem;
     }
 }
 @media (min-width: 90rem) {

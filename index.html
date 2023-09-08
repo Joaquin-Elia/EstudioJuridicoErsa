@@ -11,32 +11,31 @@
 <body id="inicio">
     <div class="max-width">
         <header class="header">
-                <a href="/">
-                    <img 
-                        class="header-logo"
-                        src="./assets/logo.jpg" 
-                        alt="Logo Erreguerena y Sabalua"
-                    >
-                </a>
-        
-                <nav class="header-nav">
-                    <button class="header-close" id="closeBtn">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
-                          </svg>
-                    </button>
-                    <ul class="header-list">
-                        <li><a href="#inicio" class="nav-link">Inicio</a></li>
-                        <li><a href="#servicios" class="nav-link">Servicios</a></li>
-                        <li><a href="#" class="nav-link">Nosotros</a></li>
-                        <li><a href="#" class="nav-link">Contacto</a></li>
-                    </ul>
-                </nav>
-                <button class="header-hamburger" id="hamburgerBtn">
+            <a href="/">
+                <img 
+                    class="header-logo"
+                    src="./assets/logo.jpg" 
+                    alt="Logo Erreguerena y Sabalua"
+                >
+            </a>
+            <nav class="header-nav">
+                <button class="header-close" id="closeBtn" aria-label="Cerrar menú">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-                    </svg>
+                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+                        </svg>
                 </button>
+                <ul class="header-list">
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="#" class="nav-link">Nosotros</a></li>
+                    <li><a href="#" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="header-hamburger" id="hamburgerBtn" aria-label="Abrir menú">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </button>
         </header>
     </div>
 
@@ -45,16 +44,14 @@
             <div class="home-info">
                 <h1 class="home-title">
                     <span>Estudio Juridico</span> 
-                    Erreguerena y Sabalua
+                    Erreguerena & Sabalua 
                 </h1>
                 <div>
                     <p class="home-description">
                         <!-- Brindamos asesoramiento personalizado para situaciones como 
-                        accidentes de trabajo, despidos, sucesiones, contratos y otras necesidades legales
-                     -->
-                     <!--  -->
-                     Somos un equipo de abogados con amplia experiencia y formación.
-                     Brindamos asesoramiento y representación para problemas legales en Azul y la zona.
+                        accidentes de trabajo, despidos, sucesiones, contratos y otras necesidades legales-->
+                        Somos un equipo de abogados con amplia experiencia y formación.
+                        Brindamos asesoramiento y representación para problemas legales <strong>en Azul y la zona</strong>.
                     </p>
                     <button class="home-btn">
                         Agenda una entrevista
@@ -64,72 +61,193 @@
             <img 
                 class="home-image"
                 src="./assets/estudioJuridicoHome.jpeg" 
-                alt=""
+                alt="Abogados Lisandro Erreguerena y Francisco Sabalúa"
             >
         </section>
         
         <section id="servicios">
             <h2 class="services-title">Nuestros servicios</h2>
             <div class="services">
-                <div class="services-card">
-                    <div>
-                        <h3 class="services-card-title">Despidos</h3>
-                        <p class="services-card-p">
-                            Si usted ha sido despedido injustamente o sin causa, 
-                            tiene derecho a reclamar una indemnización por despido.
-                        </p>
-                    </div>
-                    <img 
-                        class="services-card-img"
-                        src="./assets/despido.jpg" 
-                        alt="Despidos"
-                    >
-                </div>
-                <div class="services-card">
-                    <div>
-                        <h3 class="services-card-title">Accidentes de transito</h3>
-                        <p class="services-card-p">
-                            Si sufriste un accidente de tránsito por culpa de otro conductor, 
-                            podes reclamar una indemnización por los daños y perjuicios sufridos.
-                        </p>
-                    </div>
-                    <img
-                        class="services-card-img"
-                        src="./assets/accidenteTransito.jpg" 
-                        alt="Despidos"
-                    >
-                </div>
-                <div class="services-card">
-                    <div>
+                <article class="services-card">
+                    <header>
                         <h3 class="services-card-title">Accidentes de trabajo</h3>
                         <p class="services-card-p">
                             Si tuviste un accidente durante el desempeño de la actividad laboral 
                             o en el trayecto al trabajo, podes pedir una prestación por incapacidad 
                             y una indemnización por los daños.
                         </p>
-                    </div>
-                    <img 
-                        class="services-card-img"
-                        src="./assets/accidenteTrabajo.jpg" 
-                        alt="Accidentes de trabajo"
-                    >
-                </div>
-                <div class="services-card">
-                    <div>
+                    </header>
+                    <figure>
+                        <img 
+                            class="services-card-img"
+                            src="./assets/accidenteTrabajo.jpg" 
+                            alt="Servicio para accidentes de trabajo"
+                        >
+                    </figure>
+                </article>
+                <article class="services-card">
+                    <header>
+                        <h3 class="services-card-title">Accidentes de transito</h3>
+                        <p class="services-card-p">
+                            Si sufriste un accidente de tránsito por culpa de otro conductor, 
+                            podes reclamar una indemnización por los daños y perjuicios sufridos.
+                        </p>
+                    </header>
+                    <figure>
+                        <img
+                            class="services-card-img"
+                            src="./assets/accidenteTransito.jpg" 
+                            alt="Servicio para accidentes de transito"
+                        >
+                    </figure>
+                </article>
+                <article class="services-card">
+                    <header>
+                        <h3 class="services-card-title">Despidos</h3>
+                        <p class="services-card-p">
+                            Si usted ha sido despedido injustamente o sin causa, 
+                            tiene derecho a reclamar una indemnización por despido.
+                        </p>
+                    </header>
+                    <figure>
+                        <img 
+                            class="services-card-img"
+                            src="./assets/despido.jpg" 
+                            alt="Servicio para despidos"
+                        >
+                    </figure>
+                </article>
+                <article class="services-card">
+                    <header>
                         <h3 class="services-card-title">Sucesiones</h3>
                         <p class="services-card-p">
                             El trámite sucesorio es indispensable para que los herederos puedan
                             disponer libremente de los bienes y distribuir, en su caso, los que haya
                             dejado el causante.
                         </p>
-                    </div>
-                    <img 
-                        class="services-card-img"
-                        src="./assets/sucesión.jpg" 
-                        alt="Sucesiones"
-                    >
-                </div>
+                    </header>
+                    <figure>
+                        <img 
+                            class="services-card-img"
+                            src="./assets/sucesion.jpg" 
+                            alt="Servicio para sucesiones"
+                        >
+                    </figure>
+                </article>
+                <article class="services-card">
+                    <header>
+                        <h3 class="services-card-title">Defensa del consumidor</h3>
+                        <p class="services-card-p">
+                            Si padeciste abusos o incumplimientos de empresas o comercios, te representamos
+                            en reclamos administrativos o judiciales, para hacer valer tus derechos como consumidor.
+                        </p>
+                    </header>
+                    <figure>
+                        <img
+                            class="services-card-img"
+                            src="./assets/defensaConsumidor2.jpg" 
+                            alt="Servicio para accidentes de transito"
+                        >
+                    </figure>
+                </article>
+                <article class="services-card">
+                    <header>
+                        <h3 class="services-card-title">Defensa ante sumarios</h3>
+                        <p class="services-card-p">
+                            Si te enfrentás a un sumario administrativo por una falta o infracción, 
+                            podemos asesorarte para ejercer tu derecho a la defensa y al debido proceso.
+                        </p>
+                    </header>
+                    <figure>
+                        <img
+                            class="services-card-img"
+                            src="./assets/sumario.jpg" 
+                            alt="Servicio para accidentes de transito"
+                        >
+                    </figure>
+                </article>
             </div>
+
+            <h2>Nuestras calculadoras</h2>
+            <p>Recorda que los calculos son estimativos y deben ser revisados por un abogado para cada caso en particular.</p>
+            <div class="calculators-container">
+                
+                <button id="showTraffic" class="btn-show-calulator">Accidente de Tránsito</button>
+                <button id="showWork" class="btn-show-calulator">Accidente Laboral</button>
+                <button id="showDismissal" class="btn-show-calulator">Despido</button>
+
+                <!-- Calculadora accidente transito -->
+                <section id="calculatorTraffic">
+                    <form>
+                        <!-- <label for="ageTraffic">Edad del Accidentado:</label> -->
+                        <input type="number" id="ageTraffic" placeholder="Edad del Accidentado" required>
+                
+                        <!-- <label for="salaryTraffic">Ingreso Mensual:</label> -->
+                        <input type="number" id="salaryTraffic" placeholder="Ingreso Mensual" required>
+                
+                        <!-- <label for="percentageTraffic">Porcentaje de Incapacidad:</label> -->
+                        <input type="number" id="percentageTraffic" placeholder="Porcentaje de Incapacidad" required>
+                
+                        <button type="button" id="calculateTraffic">Calcular Indemnización</button>
+                    </form>
+                
+                    <p id="resultTraffic"></p>
+                </section>
+                
+                <!-- calculadora accidente trabajo -->
+                <section id="calculatorWork">
+                    <form class="calculator-work">
+                        <label for="ageWork">Edad del Trabajador:</label>
+                        <input type="number" id="ageWork" required>
+
+                        <label for="salaryWork">Salario Base:</label>
+                        <input type="number" id="salaryWork" required>
+                
+                        <label for="percentageWork">Porcentaje de Incapacidad:</label>
+                        <input type="number" id="percentageWork" required>
+                        
+                        <label for="accidentPlace">Lugar del Accidente:</label>
+                        <select id="accidentPlace" required>
+                            <option value="work">En el Trabajo</option>
+                            <option value="inItinere">In Itinere</option>
+                        </select>
+            
+                        <button type="button" id="calculateWork">Calcular Indemnización</button>
+                    </form>
+            
+                    <p id="resultWork"></p>
+                </section>
+
+                <!-- calculadora despido -->
+                <section id="calculatorDismissal">
+                    <form class="calculator-dismissal">
+                        <label for="employmentDate">Fecha de Ingreso:</label>
+                        <input type="date" id="employmentDate" required>
+                
+                        <label for="dismissalDate">Fecha de Despido:</label>
+                        <input type="date" id="dismissalDate" required>
+                
+                        <label for="salaryDismissal">Mejor Sueldo Bruto:</label>
+                        <input type="number" id="salaryDismissal" required>
+                
+                        <label for="dismissalNotice">¿Hubo Preaviso?</label>
+                        <select id="dismissalNotice" required>
+                            <option value="si">Sí</option>
+                            <option value="no">No</option>
+                        </select>
+                
+                        <button type="button" id="calculateDismissal">Calcular Indemnización</button>
+                    </form>
+
+                    <p id="errorDismissal" style="color: red;"></p>
+
+                    <p id="resultDismissal"></p>
+                </section>
+            </div>
+        </section>
+
+        <section>
+
         </section>
 
     </main>
