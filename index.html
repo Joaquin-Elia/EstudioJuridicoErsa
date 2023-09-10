@@ -9,35 +9,33 @@
     <title>Estudio Juridico EYS</title>
 </head>
 <body id="inicio">
-    <div class="max-width">
-        <header class="header">
-            <a href="/">
-                <img 
-                    class="header-logo"
-                    src="./assets/logo.jpg" 
-                    alt="Logo Erreguerena y Sabalua"
-                >
-            </a>
-            <nav class="header-nav">
-                <button class="header-close" id="closeBtn" aria-label="Cerrar menú">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
-                        </svg>
-                </button>
-                <ul class="header-list">
-                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
-                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
-                    <li><a href="#" class="nav-link">Nosotros</a></li>
-                    <li><a href="#" class="nav-link">Contacto</a></li>
-                </ul>
-            </nav>
-            <button class="header-hamburger" id="hamburgerBtn" aria-label="Abrir menú">
+    <header class="header">
+        <a href="/">
+            <img 
+                class="header-logo"
+                src="./assets/logo.jpg" 
+                alt="Logo Erreguerena y Sabalua"
+            >
+        </a>
+        <nav class="header-nav">
+            <button class="header-close" id="closeBtn" aria-label="Cerrar menú">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-                </svg>
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+                    </svg>
             </button>
-        </header>
-    </div>
+            <ul class="header-list">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="#" class="nav-link">Nosotros</a></li>
+                <li><a href="#" class="nav-link">Contacto</a></li>
+            </ul>
+        </nav>
+        <button class="header-hamburger" id="hamburgerBtn" aria-label="Abrir menú">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+        </button>
+    </header>
 
     <main>
         <section class="home">
@@ -66,7 +64,9 @@
         </section>
         
         <section id="servicios">
-            <h2 class="services-title">Nuestros servicios</h2>
+            <h2 class="services-title">
+                <span>Nuestros</span> <strong>Servicios</strong>
+            </h2>
             <div class="services">
                 <article class="services-card">
                     <header>
@@ -168,8 +168,8 @@
                 </article>
             </div>
 
-            <h2>Nuestras calculadoras</h2>
-            <p>Recorda que los calculos son estimativos y deben ser revisados por un abogado para cada caso en particular.</p>
+            <!-- <h2>Nuestras calculadoras</h2>
+            <p>Recorda que los calculos son estimativos y deben ser revisados por un abogado para cada caso en particular.</p> -->
             <div class="calculators-container">
                 
                 <button id="showTraffic" class="btn-show-calulator">Accidente de Tránsito</button>
@@ -179,56 +179,42 @@
                 <!-- Calculadora accidente transito -->
                 <section id="calculatorTraffic">
                     <form>
-                        <!-- <label for="ageTraffic">Edad del Accidentado:</label> -->
-                        <input type="number" id="ageTraffic" placeholder="Edad del Accidentado" required>
-                
-                        <!-- <label for="salaryTraffic">Ingreso Mensual:</label> -->
-                        <input type="number" id="salaryTraffic" placeholder="Ingreso Mensual" required>
-                
-                        <!-- <label for="percentageTraffic">Porcentaje de Incapacidad:</label> -->
-                        <input type="number" id="percentageTraffic" placeholder="Porcentaje de Incapacidad" required>
-                
-                        <button type="button" id="calculateTraffic">Calcular Indemnización</button>
+                        <input type="number" id="ageTraffic" placeholder="Edad del Accidentado">
+                        <input type="number" id="salaryTraffic" placeholder="Ingreso Mensual">
+                        <input type="number" id="percentageTraffic" placeholder="Porcentaje de Incapacidad">
+                        <button type="button" id="calculateTraffic" class="btn-calculate">Calcular Indemnización</button>
                     </form>
                 
+                    <p id="errorTraffic"></p>
                     <p id="resultTraffic"></p>
                 </section>
                 
                 <!-- calculadora accidente trabajo -->
                 <section id="calculatorWork">
                     <form class="calculator-work">
-                        <label for="ageWork">Edad del Trabajador:</label>
-                        <input type="number" id="ageWork" required>
-
-                        <label for="salaryWork">Salario Base:</label>
-                        <input type="number" id="salaryWork" required>
-                
-                        <label for="percentageWork">Porcentaje de Incapacidad:</label>
-                        <input type="number" id="percentageWork" required>
+                        <input type="number" id="ageWork" placeholder="Edad del Trabajador">
+                        <input type="number" id="salaryWork" placeholder="Salario Base">
+                        <input type="number" id="percentageWork" placeholder="Porcentaje de Incapacidad">
                         
                         <label for="accidentPlace">Lugar del Accidente:</label>
-                        <select id="accidentPlace" required>
+                        <select id="accidentPlace">
                             <option value="work">En el Trabajo</option>
                             <option value="inItinere">In Itinere</option>
                         </select>
             
-                        <button type="button" id="calculateWork">Calcular Indemnización</button>
+                        <button type="button" id="calculateWork" class="btn-calculate">Calcular Indemnización</button>
                     </form>
             
+                    <p id="errorWork"></p>
                     <p id="resultWork"></p>
                 </section>
 
                 <!-- calculadora despido -->
                 <section id="calculatorDismissal">
                     <form class="calculator-dismissal">
-                        <label for="employmentDate">Fecha de Ingreso:</label>
-                        <input type="date" id="employmentDate" required>
-                
-                        <label for="dismissalDate">Fecha de Despido:</label>
-                        <input type="date" id="dismissalDate" required>
-                
-                        <label for="salaryDismissal">Mejor Sueldo Bruto:</label>
-                        <input type="number" id="salaryDismissal" required>
+                        <input type="date" id="employmentDate" placeholder="Fecha de Ingreso">
+                        <input type="date" id="dismissalDate" placeholder="Fecha de Despido">
+                        <input type="number" id="salaryDismissal" placeholder="Mejor Sueldo Bruto">
                 
                         <label for="dismissalNotice">¿Hubo Preaviso?</label>
                         <select id="dismissalNotice" required>
@@ -236,11 +222,10 @@
                             <option value="no">No</option>
                         </select>
                 
-                        <button type="button" id="calculateDismissal">Calcular Indemnización</button>
+                        <button type="button" id="calculateDismissal" class="btn-calculate">Calcular Indemnización</button>
                     </form>
 
-                    <p id="errorDismissal" style="color: red;"></p>
-
+                    <p id="errorDismissal"></p>
                     <p id="resultDismissal"></p>
                 </section>
             </div>

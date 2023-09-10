@@ -1,10 +1,8 @@
-.max-width{
+.header{
     position: sticky;
     top: 0;
     left: 0;
     background-color: var(--light-color);
-}
-.header{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -102,11 +100,17 @@
     letter-spacing: -.5px;
 }
 .services-title{
-    margin: 3rem .5rem 2rem .5rem;
+    margin: 3rem 0;
     font-size: 2em;
     line-height: 1.9rem;
-    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 3rem;
     font-weight: 700;
+}
+.services-title > strong{
+    padding: 0 0 0 5rem;
 }
 .services-card{
     padding: .5rem .8rem;
@@ -136,7 +140,7 @@
     background-color: var(--dark-color);
     color: #fff;
     width: 90%;
-    padding: 1rem .5rem 2rem .5rem;
+    padding: 1rem .5rem 1rem .5rem;
     margin: 2rem auto;
     display: flex;
     flex-direction: column;
@@ -155,8 +159,9 @@
     border: 1px solid var(--light-color);
     background-color: transparent;
     transition: .2s ease-in;
+    text-align: center;
 }
-.btn-calc-active {
+.btn-calc-active{
     border: transparent;
     background-color: var(--first-color);
     color: var(--dark-color);
@@ -176,17 +181,49 @@ input{
     border-radius: .4rem;
     height: 2.8rem;
     margin: 1rem;
-    width: 80vw;
+    width: calc(80vw - 1rem);
     background-color: var(--light-color);
     color: var(--dark-color);
     font-size: .9em;
     font-weight: 700;
+    padding: 0 .7rem;
 }
 input::placeholder{
     color: #4d4d4d;
     font-size: .95em;
     font-weight: 700;
-    padding: 0 .7rem;
+}
+label, select{
+    margin: 1rem;
+}
+select {
+    outline: none;
+    color: var(--dark-color);
+    background: #fff;
+}
+.btn-calculate{
+    width: 80%;
+    margin: auto;
+    padding: .8rem;
+    border-radius: 2rem;
+    background-color: var(--first-color);
+    color: var(--dark-color);
+    font-weight: 700;
+    font-size: .85em;
+}
+#errorTraffic, #errorWork, #errorDismissal {
+    color: #bb0000;
+    font-size: .9em;
+    margin: 1rem 1rem 0 1rem;
+    text-align: center
+}
+#resultTraffic, #resultWork, #resultDismissal{
+    margin: 2rem 1rem 0 1rem;
+    text-align: center;
+    font-size: .95em;
+    color: var(--first-color);
+    font-weight: 700;
+    border-radius: .4rem;
 }
 
 @media (min-width: 21rem) {
@@ -217,7 +254,10 @@ input::placeholder{
     }
     /* servicios */
     .services-title{
-        margin: 3rem .8rem 3rem .8rem;
+        padding-right: 4rem;
+    }
+    .services-title > strong{
+        padding: 0 0 0 7rem;
     }
     .services-card{
         padding: .8rem 1rem;
@@ -284,7 +324,9 @@ input::placeholder{
         gap: 2rem;
     }
     .services-title{
-        margin: 3rem 1.5rem 3rem 1.5rem;
+        margin: 3rem 0;
+        gap: .8rem;
+        font-size: 2.8em;
     }
 }
 @media (min-width: 50rem) {
@@ -346,7 +388,9 @@ input::placeholder{
         gap: 1rem;
     }
     .services-title{
-        margin: 3rem;
+        margin: 4rem 0;
+        font-size: 3em;
+        gap: 1.2rem;
     }
     .services-card{
         width: 17rem;
@@ -379,7 +423,7 @@ input::placeholder{
     .home-description{
         max-width: 28rem;
         padding-bottom: 1.5rem;
-        font-size: 1.15em;
+        font-size: 1.05em;
     }
     .home-btn{
         padding: 1rem 1.8rem;
@@ -390,12 +434,26 @@ input::placeholder{
         height: 100vh;
     }
     .services-title{
-        margin: 4rem 2rem;
-        font-size: 2.5em;
+        margin: 6rem 0;
+        font-size: 3.4em;
         letter-spacing: -1px;
+        gap: 1.5rem;
+        padding-right: 5rem;
+    }
+    .services-title > strong{
+        padding: 0 0 0 8rem;
+    }
+    .services{
+        margin: auto;
+        max-width: 80rem;
+        gap: 2rem;
     }
     .services-card{
-        width: 18rem;
+        width: 20rem;
+        height: 25rem;
+    }
+    .services-card-p{
+        width: 16rem;
     }
 }
 @media (min-width: 90rem) {
@@ -405,9 +463,6 @@ input::placeholder{
     .home{
         margin: 4rem;
         margin-bottom: 0;
-    }
-    .home-description{
-        font-size: 1.15em;
     }
     .home-btn{
         padding: 1rem 2rem;
