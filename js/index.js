@@ -81,9 +81,9 @@ window.addEventListener('DOMContentLoaded', () => {
         const Vn = 1 / Math.pow((1 + i), n);
         let a = salary * (60 / age) * 13 * (inabilityPercentage / 100);
         
-        const compensation = a * (1 - Vn) * (1 / i);
-    
-        result.textContent = `La indemnización es: $${Math.floor(compensation.toFixed(2))} pesos.`;
+        const compensation = Math.round(a * (1 - Vn) * (1 / i));
+
+        result.textContent = `La indemnización es de: $${compensation.toLocaleString('es-AR')} pesos.`;
     });
     
     // work accident
@@ -93,7 +93,7 @@ window.addEventListener('DOMContentLoaded', () => {
         const age = parseFloat(document.getElementById("ageWork").value);
         const salary = parseFloat(document.getElementById("salaryWork").value);
         const inabilityPercentage = parseFloat(document.getElementById("percentageWork").value);
-        const place = document.getElementById("accidentPlace");
+        const accidentPlace = document.querySelector('input[name="accidentPlace"]:checked').value;
     
         errorWork.textContent = ''
         // Validaciones
@@ -118,13 +118,11 @@ window.addEventListener('DOMContentLoaded', () => {
             return;
         }
     
-        let accidentPlace = place.value;
-    
-        let compensation = salary * 53 * (65 / age) * (inabilityPercentage / 100);
+        let compensation = Math.round(salary * 53 * (65 / age) * (inabilityPercentage / 100));
     
         accidentPlace === "work" && (compensation *= 1.2)
         
-        resultWork.textContent = `La indemnización es: $${Math.floor(compensation.toFixed(2))} pesos.`;
+        resultWork.textContent = `La indemnización es de: $${compensation.toLocaleString('es-AR')} pesos.`;
     });
     
     // dismissal 
@@ -147,7 +145,7 @@ window.addEventListener('DOMContentLoaded', () => {
         const employmentDate = new Date(document.querySelector("#employmentDate").value);
         const dismissalDate = new Date(document.querySelector("#dismissalDate").value);
         const salaryDismissal = parseFloat(document.querySelector("#salaryDismissal").value);
-        const dismissalNotice = document.querySelector("#dismissalNotice").value;
+        const dismissalNotice = document.querySelector('input[name="dismissalNotice"]:checked').value;
     
         // Validar los datos ingresados por el usuario
         const errorElement = document.querySelector("#errorDismissal");
@@ -212,9 +210,9 @@ window.addEventListener('DOMContentLoaded', () => {
         const workedDaysValue = (dismissalDate.getDate() * salaryDismissal) / 30;
     
         // Calcular el total de la indemnización
-        const totalIndemnizacion = indemnizacionAntiguedad + indemnizacionPreaviso + vacationValue + proportionalVacationValue + aguinaldoValue + workedDaysValue;
+        const totalIndemnization = Math.round(indemnizacionAntiguedad + indemnizacionPreaviso + vacationValue + proportionalVacationValue + aguinaldoValue + workedDaysValue);
         
         // Mostrar el resultado en la página
-        document.querySelector("#resultDismissal").textContent = `La indemnización es de ${Math.floor(totalIndemnizacion.toFixed(2))} pesos.`;
+        document.querySelector("#resultDismissal").textContent = `La indemnización es de: ${totalIndemnization.toLocaleString('es-AR')} pesos.`;
     });
 });

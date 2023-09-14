@@ -168,20 +168,25 @@
                 </article>
             </div>
 
-            <!-- <h2>Nuestras calculadoras</h2>
-            <p>Recorda que los calculos son estimativos y deben ser revisados por un abogado para cada caso en particular.</p> -->
+            <h2 class="calculators-title">Nuestras Calculadoras</h2>
+            <p class="calculators-description">Los calculos son estimativos y deben ser revisados por un abogado para cada caso en particular.</p>
+            
             <div class="calculators-container">
-                
-                <button id="showTraffic" class="btn-show-calulator">Accidente de Tránsito</button>
-                <button id="showWork" class="btn-show-calulator">Accidente Laboral</button>
-                <button id="showDismissal" class="btn-show-calulator">Despido</button>
+                <div class="btns-show-container">
+                    <button id="showTraffic" class="btn-show-calulator">Accidente de Tránsito</button>
+                    <button id="showWork" class="btn-show-calulator">Accidente Laboral</button>
+                    <button id="showDismissal" class="btn-show-calulator">Despido</button>
+                </div>
 
                 <!-- Calculadora accidente transito -->
                 <section id="calculatorTraffic">
                     <form>
-                        <input type="number" id="ageTraffic" placeholder="Edad del Accidentado">
-                        <input type="number" id="salaryTraffic" placeholder="Ingreso Mensual">
-                        <input type="number" id="percentageTraffic" placeholder="Porcentaje de Incapacidad">
+                        <div class="container-inputs">
+                            <input type="number" id="ageTraffic" placeholder="Edad del Accidentado">
+                            <input type="number" id="salaryTraffic" placeholder="Ingreso Mensual">
+                            <input type="number" id="percentageTraffic" placeholder="Porcentaje de Incapacidad">
+
+                        </div>
                         <button type="button" id="calculateTraffic" class="btn-calculate">Calcular Indemnización</button>
                     </form>
                 
@@ -191,17 +196,20 @@
                 
                 <!-- calculadora accidente trabajo -->
                 <section id="calculatorWork">
-                    <form class="calculator-work">
-                        <input type="number" id="ageWork" placeholder="Edad del Trabajador">
-                        <input type="number" id="salaryWork" placeholder="Salario Base">
-                        <input type="number" id="percentageWork" placeholder="Porcentaje de Incapacidad">
-                        
-                        <label for="accidentPlace">Lugar del Accidente:</label>
-                        <select id="accidentPlace">
-                            <option value="work">En el Trabajo</option>
-                            <option value="inItinere">In Itinere</option>
-                        </select>
-            
+                    <form>
+                        <div class="container-inputs">
+                            <input type="number" id="ageWork" placeholder="Edad del Trabajador">
+                            <input type="number" id="salaryWork" placeholder="Salario Base">
+                            <input type="number" id="percentageWork" placeholder="Porcentaje de Incapacidad">
+                        </div>
+                            <span class="title-radio">Lugar del Accidente:</span>
+                            <div class="radio-container">
+                                <input type="radio" id="work" name="accidentPlace" value="work" checked>
+                                <label for="work"><span class="input-radio"></span> Trabajo</label>
+    
+                                <input type="radio" id="inItinere" name="accidentPlace" value="inItinere" >
+                                <label for="inItinere"><span class="input-radio"></span> In Itinere</label>
+                            </div>
                         <button type="button" id="calculateWork" class="btn-calculate">Calcular Indemnización</button>
                     </form>
             
@@ -211,34 +219,45 @@
 
                 <!-- calculadora despido -->
                 <section id="calculatorDismissal">
-                    <form class="calculator-dismissal">
-                        <input type="date" id="employmentDate" placeholder="Fecha de Ingreso">
-                        <input type="date" id="dismissalDate" placeholder="Fecha de Despido">
-                        <input type="number" id="salaryDismissal" placeholder="Mejor Sueldo Bruto">
-                
-                        <label for="dismissalNotice">¿Hubo Preaviso?</label>
-                        <select id="dismissalNotice" required>
-                            <option value="si">Sí</option>
-                            <option value="no">No</option>
-                        </select>
-                
+                    <form>
+                        <div class="inputs-dismissal">
+                            <div>
+                                <label for="employmentDate" class="dismissal-label">Fecha de ingreso</label>
+                                <input type="date" id="employmentDate">
+                            </div>
+                            <div>
+                                <label for="dismisalDate" class="dismissal-label">Fecha de despido</label>
+                                <input type="date" id="dismissalDate">
+                            </div>
+                            <div>
+                                <label for="salaryDismissal" class="dismissal-label">Mejor sueldo bruto</label>
+                                <input type="number" id="salaryDismissal" placeholder="Ingresá tu mejor sueldo bruto">
+                            </div>
+                        </div>
+                        <span class="title-radio">¿Hubo Preaviso?</span>
+                        <div class="radio-container">
+                            <input type="radio" id="si" name="dismissalNotice" value="si" checked>
+                            <label for="si"><span class="input-radio"></span> Sí</label>
+
+                            <input type="radio" id="no" name="dismissalNotice" value="no" >
+                            <label for="no"><span class="input-radio"></span> No</label>
+                        </div>
+
                         <button type="button" id="calculateDismissal" class="btn-calculate">Calcular Indemnización</button>
                     </form>
-
                     <p id="errorDismissal"></p>
                     <p id="resultDismissal"></p>
                 </section>
             </div>
         </section>
 
-        <section>
+        <section >
 
         </section>
-
     </main>
 
     <footer>
-
+ 
     </footer>
 
     <script src="./js/index.js"></script>
