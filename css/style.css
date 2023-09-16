@@ -72,13 +72,14 @@
     color: #4d4d4d;
 }
 .home-btn{
+    display: inline-block;
     padding: .7rem 1.6rem;
     border-radius: .5rem;
     background-color: var(--first-color);
     font-weight: 600;
     font-size: .85em;
-    cursor: pointer;
     transition: .7s;
+    cursor: pointer;
 }
 .home-btn:hover{
     background-color: #ffd52c;
@@ -90,17 +91,21 @@
     object-fit: cover;
 }
 /* Services */
+.space-to-scroll{
+    height: 4rem;
+    width: 100%;
+}
 .services{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     gap: 1.5rem;
     letter-spacing: -.5px;
 }
 .services-title{
-    margin: 3rem 0;
+    margin: 1rem 0 2rem 0;
     font-size: 2em;
     line-height: 1.9rem;
     display: flex;
@@ -137,7 +142,7 @@
 }
 /* calculators */
 .calculators-title{
-    margin: 2rem .5rem 0 .5rem;
+    margin: 0 .5rem 0 .5rem;
     font-size: 1.8em;
     letter-spacing: -.5px;
     font-weight: 700;
@@ -289,6 +294,129 @@ input[type=radio]:checked + label .input-radio::after{
 input[type=radio]:checked + label{
     font-weight: 700;
 }
+/* Whatsapp btn */
+.btn-wpp{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    position: fixed;
+    bottom: .5rem;
+    right: .3rem;
+    background-color: #25D366;
+    color: #fff;
+    z-index: 4;
+    border-radius: 50%;
+    user-select: none;
+}
+.wpp-icon{
+    width: 1.7rem;
+    height: 1.7rem;
+}
+.btn-wpp > span {
+    display: none;
+}
+#nosotros{
+    position: relative;
+}
+/* testimonials */
+.testimonials{
+    overflow-x: hidden;
+    display: flex;
+    margin: 2rem 0;
+    scroll-behavior: smooth;
+}
+.testimonials.dragging-slider{
+    scroll-behavior: auto;
+}
+#testimonialsContainer{
+    display: flex;
+    gap: 1rem;
+    padding: 0 .5rem;
+}
+.arrow-slider {
+    height: 2.3rem;
+    width: 2.3rem;
+    position: absolute;
+    top: 100%;
+    background-color: #fff;
+    color: var(--dark-color);
+    text-align: center;
+    border-radius: 50%;
+    transform: translateY(-40%);
+    cursor: pointer;
+    box-shadow: 6px 9px 23px -7px rgba(0,0,0,0.45);
+    -webkit-box-shadow: 6px 9px 23px -7px rgba(0,0,0,0.45);
+    -moz-box-shadow: 6px 9px 23px -7px rgba(0,0,0,0.45);
+}
+.arrow-slider:first-child{
+    left: 34%;
+    display: none;
+}
+.arrow-slider:last-child{
+    right: 34%;
+}
+.testimonial-card{
+    user-select: none;
+    overflow-y: auto;
+    width: 14.5rem;
+    height: 16.5rem;
+    padding: 1rem .5rem;
+    background-color: #3e3e3e20;
+    border-radius: .4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.testimonial-card::-webkit-scrollbar{
+    background-color: transparent;
+    width: .2rem;
+  }
+.testimonial-card::-webkit-scrollbar-thumb{
+    background-color: #aaaaaa;
+} 
+.testimonial-header-client{
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    margin-bottom: .6rem;
+}
+.testimonial-img{
+    width: 2.5rem;
+    pointer-events: none;
+}
+.testimonial-name{
+    font-size: .9em;
+    line-height: 1.1rem;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+.testimonial-stars{
+    display: flex;
+    gap: .1rem;
+    margin-bottom: 1rem;
+    color: var(--first-color);
+}
+.testimonial-stars > svg{
+    width: 1em;
+}
+.testimonial-quote{
+    font-size: .95em;
+    line-height: 1.3rem;
+    margin-bottom: .5rem;
+}
+.testimonial-footer{
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    font-size: .85em;
+    color: #197bff;
+}
+.google-icon{
+    width: 2rem;
+    height: 2rem;
+}
 @media (min-width: 21rem) {
     .header{
         padding: .5rem .8rem;
@@ -316,6 +444,9 @@ input[type=radio]:checked + label{
         height: 50vh;
     }
     /* servicios */
+    .services{
+        margin-bottom: 2rem;
+    }
     .services-title{
         padding-right: 4rem;
     }
@@ -342,7 +473,7 @@ input[type=radio]:checked + label{
     }
     /* calculators */
     .calculators-title{
-        margin: 3rem .8rem 0 .8rem;
+        margin: 0 .8rem 0 .8rem;
         font-size: 2em;
         line-height: 2.2rem;
     }
@@ -356,6 +487,49 @@ input[type=radio]:checked + label{
     .btn-show-calulator{
         padding: .55rem;
         margin: .7rem auto;
+    }
+    .btn-wpp{
+        width: 3.5rem;
+        height: 3.5rem;
+        bottom: .5rem;
+        right: .8rem;
+    }
+    .wpp-icon{
+        width: 2rem;
+        height: 2rem;
+    }
+    /* testimonials */
+    #testimonialsContainer{
+        padding: 0 .8rem;
+    }
+    .arrow-slider {
+        height: 2.6rem;
+        width: 2.6rem;
+    }
+    .testimonial-card{
+        width: 16rem;
+        height: 18rem;
+        padding: 1.2rem 1rem;
+    }
+    .testimonial-header-client{
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+    .testimonial-img{
+        width: 2.8rem;
+    }
+    .testimonial-name{
+        font-size: .95em;
+    }
+    .testimonial-stars{
+        gap: .15rem;
+    }
+    .testimonial-stars > svg{
+        width: 1.05em;
+    }
+    .testimonial-footer{
+        gap: .8rem;
+        font-size: .9em;
     }
 }
 @media (min-width: 25rem) {
@@ -390,7 +564,7 @@ input[type=radio]:checked + label{
         padding: .6rem;
     }
     .calculators-title{
-        margin: 3rem 1rem 0 1rem;
+        margin: 0 1rem 0 1rem;
         font-size: 2.4em;
         line-height: 2.6rem;
     }
@@ -403,6 +577,9 @@ input[type=radio]:checked + label{
     }
     .calculators-container{
         margin: 2rem 1rem;
+    }
+    #testimonialsContainer{
+        padding: 0 1rem;
     }
 }
 @media (min-width: 36rem) {
@@ -429,7 +606,6 @@ input[type=radio]:checked + label{
         gap: 2rem;
     }
     .services-title{
-        margin: 3rem 0;
         gap: .8rem;
         font-size: 2.8em;
     }
@@ -437,7 +613,7 @@ input[type=radio]:checked + label{
         padding: .65rem;
     }
     .calculators-title{
-        margin: 3rem 1.5rem 0 1.5rem;
+        margin: 0 1.5rem 0 1.5rem;
     }
     .calculators-description{
         font-size: .95em;
@@ -446,6 +622,9 @@ input[type=radio]:checked + label{
     }
     .calculators-container{
         margin: 2rem 1.5rem;
+    }
+    #testimonialsContainer{
+        padding: 0 1.5rem;
     }
 }
 @media (min-width: 50rem) {
@@ -508,7 +687,7 @@ input[type=radio]:checked + label{
         gap: 1rem;
     }
     .services-title{
-        margin: 4rem 0;
+        margin: 3rem 0;
         font-size: 3em;
         gap: 1.2rem;
     }
@@ -520,7 +699,7 @@ input[type=radio]:checked + label{
     }
     /* calculators */
     .calculators-title{
-        margin: 3rem 2rem 0 2rem;
+        margin: 0 2rem 0 2rem;
     }
     .calculators-description{
         margin: 1.5rem 2rem 3rem 2rem;
@@ -574,6 +753,30 @@ input[type=radio]:checked + label{
     .dismissal-label{
         font-size: .95em;
         margin: 0 auto 1rem auto;
+    }
+    /* Whatsapp btn */
+    .btn-wpp{
+        gap: 1rem;
+        width: 12rem;
+        height: 2.8rem;
+        bottom: 1rem;
+        right: 2rem;
+        border-radius: 2rem;
+    }
+    .wpp-icon{
+        width: 1.4rem;
+        height: 1.4rem;
+        margin-left: .5rem;
+    }
+    .btn-wpp > span {
+        display: flex;
+        font-size: .85em;
+        margin-right: .5rem;
+        font-weight: 700;        
+        letter-spacing: -.2px;
+    }
+    #testimonialsContainer{
+        padding: 0 2rem;
     }
 }
 @media (min-width: 63rem) {
@@ -633,7 +836,7 @@ input[type=radio]:checked + label{
     }
     /* calculators */
     .calculators-title{
-        margin: 3rem 1.5rem 0 1.5rem;
+        margin: 0 1.5rem 0 1.5rem;
         font-size: 2.8em;
         line-height: 3rem;
     }
@@ -662,6 +865,25 @@ input[type=radio]:checked + label{
         padding: .9rem 1rem;
         font-size: .9em;
     }
+    #testimonialsContainer{
+        padding: 0 1.5rem;
+    }
+    .arrow-slider {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .arrow-slider:first-child{
+        left: 1.5rem;
+    }
+    .arrow-slider:last-child{
+        right: 1.5rem;
+    }
+    /* Whatsapp btn */
+    .btn-wpp{
+        right: 1.5rem;
+        border-radius: 2rem;
+    }
+    
 }
 @media (min-width: 90rem) {
     .header{
@@ -687,6 +909,7 @@ input[type=radio]:checked + label{
     }
     .services{
         gap: 2rem;
+        margin-bottom: 3rem;
     }
     .services-card{
         width: 20rem;
@@ -695,7 +918,7 @@ input[type=radio]:checked + label{
         width: 16rem;
     }
     .calculators-title{
-        margin: 4rem 4rem 0 4rem;
+        margin: 2rem 4rem 0 4rem;
         font-size: 2.8em;
         line-height: 3rem;
     }
@@ -721,5 +944,21 @@ input[type=radio]:checked + label{
     }    
     input[type=date]::-webkit-calendar-picker-indicator {
         font-size: 1.2rem;
+    }
+    #nosotros{
+        margin: 0 1rem;
+    }
+    #testimonialsContainer{
+        padding: 0 3rem;
+    }
+    .arrow-slider:first-child{
+        left: 2rem;
+    }
+    .arrow-slider:last-child{
+        right: 2rem;
+    }
+    /* Whatsapp btn */
+    .btn-wpp{
+        right: 4rem;
     }
 }

@@ -63,6 +63,12 @@ h1, h2, h3, h4, h5, h6, p, a, span, strong, i {
     background-color: var(--first-color);
     color: var(--dark-color);
 }
+blockquote{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
 form, input , textarea, select, button, label {
     font-family: inherit;
     font-size: inherit;
