@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Estudio Juridico EYS</title>
 </head>
-<body id="inicio">
+<body>
     <header class="header">
-        <a href="#inicio">
+        <a href="#">
             <img 
                 class="header-logo"
                 src="./assets/logo.jpg" 
@@ -24,7 +24,7 @@
                     </svg>
             </button>
             <ul class="header-list">
-                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#" class="nav-link">Inicio</a></li>
                 <li><a href="#servicios" class="nav-link">Servicios</a></li>
                 <li><a href="#calculadoras" class="nav-link">Calculadoras</a></li>
                 <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
@@ -42,7 +42,7 @@
             <div class="home-info">
                 <h1 class="home-title">
                     <span>Estudio Jurídico</span> 
-                    Erreguerena & Sabalua 
+                    Erreguerena & Sabalúa 
                 </h1>
                 <div>
                     <p class="home-description">
@@ -70,7 +70,7 @@
         <div class="space-to-scroll" id="servicios"></div>
         <section>
             <h2 class="services-title">
-                <span>Nuestros</span> <strong>Servicios</strong>
+                Nuestros <strong>Servicios</strong>
             </h2>
             <div class="services">
                 <article class="services-card">
@@ -256,20 +256,72 @@
             </div>
         </section>
 
-        <section id="nosotros">
+        <div class="space-to-scroll" id="nosotros"></div>
+        <section class="aboutus">
+            <div class="container-about-text">
+                <h2 class="about-title">
+                    Sobre <strong>Nosotros</strong>
+                </h2>
+                <div class="">
+                    <p class="about-description">Nuestro estudio nace en el año 2018 con el propósito de <strong class="description-strong">brindar un servicio</strong> jurídico integral <strong class="description-strong">de calidad.</strong>
+                        <!-- Nuestra especialización es el derecho de fondo, complementado con una profundización en derecho procesal y en derecho administrativo. -->
+                    </p>
+                    <p class="about-description">No solo nos dedicamos a <strong class="description-strong">resolver casos</strong>, sino que también nos preocupamos por <strong class="description-strong">entender las necesidades y objetivos</strong> de cada situación.</p>
+                    <p class="about-description">Nuestra <strong class="description-strong">filosofía</strong> se basa en la <strong class="description-strong">excelencia, </strong>la <strong class="description-strong">actualización</strong> y la <strong class="description-strong">cercanía</strong> con nuestros clientes.</p>
+                </div>
+            </div>
 
-            <svg id="iconLeft" xmlns="http://www.w3.org/2000/svg" class="arrow-slider" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
-            </svg>
+            <div class="lawer-card">
+                <img 
+                    class="lawer-card-img"
+                    src="./assets/AbogadoLisandroErreguerena.jpg" 
+                    alt="Dr. Lisandro Erreguerena">
+                <div>
+                    <h3 class="lawer-card-name">Dr. Lisandro Erreguerena</h3>
+                    <ul class="lawer-card-list">
+                        <li>Abogado (UNICEN), Mediador y Negociador (IANCA) con experiencia en áreas administrativas y de gestión de recursos humanos.</li>
+                        <li>Oficial Ayudante del Subescalafón Profesional del Ministerio de Seguridad de la provincia de Buenos Aires.</li>
+                        <li>Profesor de Derecho (por concurso) de la Materia Derecho de la Tecnicatura Superior en PYMES del Instituto 2 “Marie Malere”</li>
+                        <li>Instructor de Formación Profesional.</li>
+                        <li>Maestrando y Doctorando en Derecho Procesal por la Universidad Nacional de Rosario.</li>
+                        <li>Profesor, egresado del Tramo de Formación Docente para Profesionales y Técnicos dictado por el Instituto N° 156 “Palmiro Bogliano” de Azul.</li>
+                    </ul>
+                </div>    
+            </div>
+
+            <div class="lawer-card">
+                <img
+                    class="lawer-card-img" 
+                    src="./assets/AbogadoFranciscoSabalua.jpeg" 
+                    alt="Dr. Francisco Sabalúa">
+                <div class="container-order-two">
+                    <h3 class="lawer-card-name">Dr. Francisco M. Sabalúa</h3>
+                    <ul class="lawer-card-list">
+                        <li>Abogado egresado de la Universidad Nacional de Buenos Aires, año 2002.</li>
+                        <li>Profesor de Derecho Administrativo de Facultad de Derecho de Unicen desde el año 2004.</li>
+                        <li>Especialista de Derecho Administrativo de la Universidad Nacional de Rosario, año 2016.</li>
+                        <li>Doctorando en Derecho por la Universidad Nacional de Rosario.</li>
+                    </ul>
+                    <h4 class="lawer-card-h4">Areas de desempeño</h4>
+                    <p class="lawer-card-p">Daños y Perjuicios, derecho laboral y empleo público, accidentes de trabajo y enfermades profesionales,
+                        defensa del consumidor, sucesiones, familia, licitaciones públicas y concursos Públicos
+                    </p>
+                </div>
+            </div>
+
+            <span class="testimonials-span">Testimonios</span>
+            <h2 class="testimonials-title">Conocé lo que opinan algunos de nuestros clientes</h2>
             <div class="testimonials">
+                <svg id="iconLeft" xmlns="http://www.w3.org/2000/svg" class="arrow-slider" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+                </svg>
                 <div id="testimonialsContainer">
 
                 </div>
+                <svg id="iconRight" xmlns="http://www.w3.org/2000/svg"  class="arrow-slider" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                </svg>
             </div>
-            <svg id="iconRight" xmlns="http://www.w3.org/2000/svg"  class="arrow-slider" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
-            </svg>
-
         </section>
         <a 
             class="btn-wpp" 

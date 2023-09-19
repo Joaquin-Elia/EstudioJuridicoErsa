@@ -226,34 +226,9 @@ window.addEventListener('DOMContentLoaded', () => {
         document.querySelector("#resultDismissal").innerHTML = `La indemnización es de: <strong style="font-size: 18px;">$${totalIndemnization.toLocaleString('es-AR')}</strong> pesos.`;
     });
 
-
-
     // testimonials
     const slider = document.querySelector('.testimonials');
     const testimonialsContainer = document.getElementById('testimonialsContainer');
-
-    const timeAgo = (date) => {
-        const now = new Date();
-        const diffInSeconds = Math.floor((now - date) / 1000);
-        
-        const units = [
-            { name: 'año', seconds: 60 * 60 * 24 * 365 },
-            { name: 'mes', seconds: 60 * 60 * 24 * 30 },
-            { name: 'semana', seconds: 60 * 60 * 24 * 7 },
-            { name: 'dia', seconds: 60 * 60 * 24 }
-        ];
-        
-        for (let unit of units) {
-            const diffInUnits = Math.floor(diffInSeconds / unit.seconds);
-            if (diffInUnits >= 1) {
-                let pluralSuffix = '';
-                if (diffInUnits > 1) {
-                    pluralSuffix = unit.name === 'mes' ? 'es' : 's';
-                }
-                return `Hace ${diffInUnits} ${unit.name}${pluralSuffix}`;
-            }
-        }
-    }
 
     const testimonials = [
         {
@@ -261,100 +236,64 @@ window.addEventListener('DOMContentLoaded', () => {
             name: "Leandro Barrena",
             quote: "Gente con carisma, responsables y muy dedicados a su labor un lujo en pocas palabras",
             link: "https://g.co/kgs/kb7joo",
-            timeAgo: "8 meses"
         },
         {
             img: "https://lh3.googleusercontent.com/a-/ALV-UjVLcGdojRApTliS157D-YEW0w-U-pPH_w8qPQCCXDcQw2Q=s64-c-rp-mo-br100",
             name: "Nazareno Barraza",
             quote: "Excelente atención. Amabilidad y cordialidad, totalmente satisfecho.",
             link: "https://g.co/kgs/2Fi24c",
-            timeAgo: "5 meses"
         },
         {
             img: "https://lh3.googleusercontent.com/a/ACg8ocLdm0pAY8_JL7FB9GxxDPPMXwCbczVvpA8lzxYISvax=s64-c-rp-mo-br100",
             name: "Alfredo Vivarelli",
             quote: "Grandes profesionales y mejores personas. Comprometidos y eficaces. Para contar con el estudio.",
             link: "https://g.co/kgs/MtZf6f",
-            timeAgo: "2 semanas"
         },
         {
             img: "https://lh3.googleusercontent.com/a-/ALV-UjWz_H16vdbSIgXkefGn9zZbfnrZbvrsp00tYx3vCzpW4x4F=s64-c-rp-mo-br100",
             name: "Mariana Acosta",
             quote: "Excelente abogado muy recomendable respecto a la defensa en materia sumario muy conforme con su amabilidad y excelencia",
             link: "https://g.co/kgs/gHYgxg",
-            timeAgo: "1 semana"
         },
         {
             img: "https://lh3.googleusercontent.com/a/ACg8ocKHGDzYEAl1OTdl0hObKZPRuPtuDDtl_RsiyCQJ4EEu=s64-c-rp-mo-br100",
             name: "ignacio eyherabide",
             quote: "Exelentes profesionales muy buena atención amabilidad y muy cumplidores",
             link: "https://g.co/kgs/K7WDcE",
-            timeAgo: "1 mes"
         },
         {
             img: "https://lh3.googleusercontent.com/a-/ALV-UjUZZvtNlA7ILaZD7STbl-isovNE813mwSS2987KdEd_UJ8=s64-c-rp-mo-br100",
             name: "Yohana Jaureguiberry",
             quote: "Muy buen servicio y atencion, manejo responsable y profesional!",
             link: "https://g.co/kgs/MoQT4X",
-            timeAgo: "4 meses"
         },
         {
             img: "https://lh3.googleusercontent.com/a/ACg8ocLdn9YsipvTyOKDUNrfj2wwU6tuuDD8hlh2Hsi7ozWQ=s64-c-rp-mo-br100",
             name: "Marcela Jose",
             quote: "Excelente estudio y pronta atención y solución a su clientela. Súper recomendable!!!",
             link: "https://g.co/kgs/JvDiLZ",
-            timeAgo: "4 meses"
         },
         {
             img: "https://lh3.googleusercontent.com/a/ACg8ocL-8SFzuPrNtdJqFNeYIYZWxxM06ZTdxUbpP2RZ1nei=s64-c-rp-mo-br100",
             name: "Enrique Bautista",
             quote: "Dedicación profesional en cada expediente, buena atención, dispuestos y comprometidos en cada dificultad. Atención excelente.",
             link: "https://g.co/kgs/ysVgjm",
-            timeAgo: "2 días"
         },
         {
             img: "https://lh3.googleusercontent.com/a-/ALV-UjWV7z10r5U-oMPXvmPYeYopWPrcDQkId8JWOPjJIvt_e2o=s64-c-rp-mo-br100",
             name: "Lola Elizari",
             quote: "Excelentes profesionales y mucha calidad humana. Super recomendables!",
             link: "https://g.co/kgs/uZcYZe",
-            timeAgo: "2 días"
         },
     ]
 
-    testimonials.forEach(({img, name, quote, link, timeAgo: timeAgoText}) => {
-        const date = new Date();
-        const [value, unit] = timeAgoText.split(' ');
-    
-        switch (unit) {
-            case 'día':
-            case 'días':
-                date.setDate(date.getDate() - value);
-                break;
-            case 'semana':
-            case 'semanas':
-                    date.setDate(date.getDate() - value * 7);
-            break;
-            case 'mes':
-            case 'meses':
-                date.setMonth(date.getMonth() - value);
-                break;
-            case 'año':
-            case 'años':
-                date.setFullYear(date.getFullYear() - value);
-                break;
-        }
-    
-        const timeAgoStr = timeAgo(date); // Calcula cuánto tiempo ha pasado desde la fecha del comentario
-
+    testimonials.forEach(({img, name, quote, link}) => {
         const cardHTML = `
             <article class="testimonial-card">
                 <header class="testimonial-header">
                     <div class="testimonial-header-client">
                         <img src="${img}" alt="Foto de ${name}" class="testimonial-img">
-                        <div>
-                            <h3 class="testimonial-name">${name}</h3>
-                            <span class="testimonial-date">${timeAgoStr}</span> 
-                        </div>
+                        <h3 class="testimonial-name">${name}</h3>
                     </div>
                     <div class="testimonial-stars"> 
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -390,15 +329,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
         testimonialsContainer.innerHTML += cardHTML;
     });
-
-    // Actualizar los testimonios cada 24 horas
-    setInterval(function() {
-        const testimonials = document.querySelectorAll('.testimonial-date');
-        testimonials.forEach(testimonial => {
-            const date = new Date(testimonial.getAttribute('data-date'));
-            testimonial.textContent = timeAgo(date);
-        });
-    }, 86400000);
 
     // carousel testimonials
     const firstCard = slider.querySelectorAll('article')[0];

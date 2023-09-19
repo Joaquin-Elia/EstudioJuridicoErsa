@@ -92,19 +92,19 @@
 }
 /* Services */
 .space-to-scroll{
-    height: 4rem;
+    height: 3rem;
     width: 100%;
+    margin-top: -1rem;
 }
 .services{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2rem;
     gap: 1.5rem;
     letter-spacing: -.5px;
 }
-.services-title{
+.services-title, .about-title{
     margin: 1rem 0 2rem 0;
     font-size: 2em;
     line-height: 1.9rem;
@@ -114,7 +114,7 @@
     padding-right: 3rem;
     font-weight: 700;
 }
-.services-title > strong{
+.services-title > strong, .about-title > strong{
     padding: 0 0 0 5rem;
 }
 .services-card{
@@ -140,15 +140,16 @@
     width: 100%;
     object-fit: contain;
 }
-/* calculators */
+/* titles calculator about */
 .calculators-title{
-    margin: 0 .5rem 0 .5rem;
+    margin: 1rem .5rem 0 .5rem;
     font-size: 1.8em;
     letter-spacing: -.5px;
     font-weight: 700;
     line-height: 2rem;
     max-width: 20rem;
 }
+/* calculators */
 .calculators-description{
     font-size: .85em;
     margin: 1rem 1rem 2rem .5rem;
@@ -157,8 +158,8 @@
 .calculators-container{
     background-color: var(--dark-color);
     color: #fff;
-    padding: 1rem .5rem 0 .5rem;
-    margin: 2rem .5rem;
+    padding-top: 1rem;
+    margin: 1rem .5rem 0 .5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -317,10 +318,77 @@ input[type=radio]:checked + label{
 .btn-wpp > span {
     display: none;
 }
-#nosotros{
+/* about us */
+.aboutus{
     position: relative;
 }
+.about-title{
+    padding-right: 4rem;
+    letter-spacing: -.5px;
+}
+.about-title > strong{
+    padding-left: 6rem;
+    letter-spacing: -1px;
+    font-size: 1.9rem;
+}
+.about-description{
+    margin: 2rem .5rem;
+    color: #4d4d4d;
+    font-size: 1.3em;
+    line-height: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+.description-strong{
+    color: var(--dark-color);
+}
+.lawer-card{
+    margin: 0 .5rem 3rem .5rem;
+}
+.lawer-card-img{
+    height: 19rem;
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(95%);
+}
+.lawer-card-name{
+    font-weight: 700;
+    font-size: 1.1em;
+    margin: .5rem 0;
+}
+.lawer-card-list{
+    font-size: .85em;
+    margin-top: 1rem; 
+}
+.lawer-card-list > li{
+    list-style: disc;
+    margin: .5rem .5rem .5rem 1rem;
+}
+.lawer-card-h4{
+    font-weight: 700;
+    font-size: .95em;
+    margin-bottom: .5rem;
+}
+.lawer-card-p{
+    font-size: .85em;
+    line-height: 1rem;
+}
 /* testimonials */
+.testimonials-title, .testimonials-span{
+    margin: 0 .5rem;
+    letter-spacing: -.5px;
+}
+.testimonials-span{
+    margin-top: 2rem;
+    padding: .2rem .5rem;
+    background-color: var(--first-color);
+    display: inline-block;
+}
+.testimonials-title{
+    font-size: 1.4em;
+    font-weight: 700;
+    margin-top: .5rem;
+}
 .testimonials{
     overflow-x: hidden;
     display: flex;
@@ -351,8 +419,8 @@ input[type=radio]:checked + label{
     -moz-box-shadow: 6px 9px 23px -7px rgba(0,0,0,0.45);
 }
 .arrow-slider:first-child{
-    left: 34%;
     display: none;
+    left: 34%;
 }
 .arrow-slider:last-child{
     right: 34%;
@@ -494,7 +562,46 @@ input[type=radio]:checked + label{
         width: 2rem;
         height: 2rem;
     }
+    /* about us */
+    .about-title{
+        padding-right: 4rem;
+        font-size: 2.2em;
+        line-height: 2rem;
+    }
+    .about-title > strong{
+        padding-left: 7rem;
+        font-size: 2.1rem;
+    }
+    .about-description{
+        margin: 2rem .8rem;
+        font-size: 1.4em;
+        line-height: 1.7rem;
+    }
+    .lawer-card{
+        margin: 0 .8rem 3rem .8rem;
+    }
+    .lawer-card-img{
+        height: 24rem;
+    }
+    .lawer-card-name{
+        font-size: 1.15em;
+    }
+    .lawer-card-list{
+        font-size: .9em;
+    }
+    .lawer-card-list > li{
+        margin: .5rem .8rem .5rem 1rem;
+    }
     /* testimonials */
+    .testimonials-title, .testimonials-span{
+        margin: 0 .8rem;
+    }
+    .testimonials-title{
+        font-size: 1.5em;
+        line-height: 1.7rem;
+        margin-top: 1rem;
+        width: 19rem;
+    }
     #testimonialsContainer{
         padding: 0 .8rem;
     }
@@ -574,6 +681,48 @@ input[type=radio]:checked + label{
     .calculators-container{
         margin: 2rem 1rem;
     }
+    /* about us */
+    .about-title{
+        font-size: 2.5em;
+        line-height: 2.4rem;
+    }
+    .about-title > strong{
+        padding-left: 7rem;
+        font-size: 2.3rem;
+    }
+    .about-description{
+        margin: 3rem 1rem;
+        font-size: 1.5em;
+        line-height: 1.8rem;
+    }
+    .lawer-card{
+        margin: 0 1rem 3rem 1rem;
+    }
+    .lawer-card-img{
+        height: 28rem;
+    }
+    .lawer-card-name{
+        font-size: 1.15em;
+    }
+    .lawer-card-list{
+        font-size: .9em;
+    }
+    .lawer-card-list > li{
+        margin: .8rem 1rem .5rem 1rem;
+    }
+    .lawer-card-h4{
+        margin-bottom: .8rem;
+    }
+    .testimonials-title, .testimonials-span{
+        margin: 0 1rem;
+    }
+    .testimonials-span{
+        margin-top: 3rem;
+    }
+    .testimonials-title{
+        font-size: 1.6em;
+        margin-top: 1rem;
+    }
     #testimonialsContainer{
         padding: 0 1rem;
     }
@@ -614,7 +763,7 @@ input[type=radio]:checked + label{
     .btn-show-calulator{
         padding: .65rem;
     }
-    .calculators-title{
+    .calculators-title, .about-title{
         margin: 0 1.5rem 0 1.5rem;
     }
     .calculators-description{
@@ -625,14 +774,61 @@ input[type=radio]:checked + label{
     .calculators-container{
         margin: 2rem 1.5rem;
     }
+    /* about us */
+    .about-title{
+        font-size: 2.8em;
+        line-height: 2.6rem;
+    }
+    .about-title > strong{
+        font-size: 2.6rem;
+    }
+    .about-description{
+        margin: 3rem auto;
+        font-size: 1.7em;
+        line-height: 1.8rem;
+        max-width: 33rem;
+    }
+    .lawer-card{
+        margin: 0 1.5rem 3rem 1.5rem;
+    }
+    .lawer-card-img{
+        height: 32rem;
+        width: 80%;
+        margin: auto;
+    }
+    .lawer-card-name{
+        font-size: 1.2em;
+        width: 80%;
+        margin: auto;
+    }
+    .lawer-card-list{
+        font-size: .9em;
+        width: 80%;
+        margin: auto;
+    }
+    .lawer-card-list > li{
+        margin: .8rem 1.5rem .5rem 1.5rem;
+    }
+    .lawer-card-h4, .lawer-card-p{
+        width: 80%;
+        margin: auto;
+    }
+    .testimonials-title, .testimonials-span{
+        margin: 0 1.5rem;
+    }
+    .testimonials-title{
+        font-size: 1.7em;
+        width: 25rem;
+        margin-top: 1rem;
+    }
     #testimonialsContainer{
         padding: 0 1.5rem;
     }
     .arrow-slider:first-child{
-        left: 40%;
+        left: 42%;
     }
     .arrow-slider:last-child{
-        right: 40%;
+        right: 42%;
     }
 }
 @media (min-width: 50rem) {
@@ -660,11 +856,11 @@ input[type=radio]:checked + label{
     }
     .nav-link{
         padding: .3rem .7rem;
-        transition: .7s;
+        transition: .5s;
         border-radius: .4375rem;
     }
     .nav-link:hover{
-        filter: invert(70%);
+        color: var(--first-color);
     }
     /* home */
     .home{
@@ -706,7 +902,7 @@ input[type=radio]:checked + label{
         font-size: .9em;
     }
     /* calculators */
-    .calculators-title{
+    .calculators-title, .about-title{
         margin: 0 2rem 0 2rem;
     }
     .calculators-description{
@@ -782,6 +978,56 @@ input[type=radio]:checked + label{
         margin-right: .5rem;
         font-weight: 700;        
         letter-spacing: -.2px;
+    }
+    /* about us */
+    .about-title{
+        font-size: 3em;
+        line-height: 2.7rem;
+    }
+    .about-title > strong{
+        font-size: 2.8rem;
+    }
+    .about-description{
+        margin: 4rem auto;
+        font-size: 1.9em;
+        line-height: 2.2rem;
+        max-width: 33rem;
+    }
+    .lawer-card{
+        margin: 0 2rem 3rem 2rem;
+    }
+    .lawer-card-img{
+        height: 34rem;
+        width: 60%;
+    }
+    .lawer-card-name{
+        font-size: 1.2em;
+        width: 60%;
+        margin-top: 1rem;
+    }
+    .lawer-card-list{
+        font-size: .95em;
+        width: 60%;
+    }
+    .lawer-card-list > li{
+        margin: 1rem 2rem;
+    }
+    .lawer-card-h4, .lawer-card-p{
+        width: 60%;
+    }
+    .lawer-card-p{
+        margin-top: .5rem;
+    }
+    .testimonials-title, .testimonials-span{
+        margin: 0 2rem;
+    }
+    .testimonials-span{
+        margin-top: 4rem;
+    }
+    .testimonials-title{
+        font-size: 1.7em;
+        line-height: 2rem;
+        margin-top: 1rem;
     }
     #testimonialsContainer{
         padding: 0 2rem;
@@ -873,12 +1119,79 @@ input[type=radio]:checked + label{
         padding: .9rem 1rem;
         font-size: .9em;
     }
+    /* about us */
+    .container-about-text{
+        display: flex;
+        justify-content: space-between;
+        margin: 1rem 1.5rem;
+    }
+    .about-title{
+        font-size: 3.4em;
+        line-height: 3.4rem;
+        padding-right: 0;
+        margin: 3rem 0;
+        text-align: start;
+        align-items: flex-start;
+    }
+    .about-title > strong{
+        font-size: 3.4rem;
+        padding-left: 0;
+    }
+    .about-description{
+        font-size: 1.9em;
+        line-height: 2.3rem;
+        max-width: 30rem;
+    }
+    .lawer-card{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 1.5rem 3rem 1.5rem;
+        width: 95%;
+    }
+    .lawer-card-img{
+        height: 32rem;
+        width: 24rem;
+        order: 2;
+        margin: 2rem 0;
+        padding: 0;
+    }
+    .container-order-two{
+        order: 2;
+        width: auto;
+        margin-right: -.5rem;
+    }
+    .lawer-card-name{
+        font-size: 1.2em;
+        width: 30rem;
+        margin: 1rem 0;
+    }
+    .lawer-card-list{
+        font-size: .95em;
+        width: 35rem;
+        margin: 0;
+    }
+    .lawer-card-list > li{
+        margin: 1rem 2rem;
+    }
+    .lawer-card-h4, .lawer-card-p{
+        width: 34rem;
+        margin-left: 1rem;
+    }
+    .testimonials-title, .testimonials-span{
+        margin: 0 1.5rem;
+    }
+    .testimonials-span{
+        margin-top: 0;
+    }
+    .testimonials-title{
+        margin-top: 1rem;
+    }
     #testimonialsContainer{
         padding: 0 1.5rem;
     }
     .arrow-slider {
-        top: 50%;
-        transform: translateY(-50%);
+        top: 95%;
     }
     .arrow-slider:first-child{
         left: 1.5rem;
@@ -891,7 +1204,6 @@ input[type=radio]:checked + label{
         right: 1.5rem;
         border-radius: 2rem;
     }
-    
 }
 @media (min-width: 90rem) {
     .header{
@@ -953,11 +1265,57 @@ input[type=radio]:checked + label{
     input[type=date]::-webkit-calendar-picker-indicator {
         font-size: 1.2rem;
     }
-    #nosotros{
-        margin: 0 1rem;
+    .aboutus{
+        margin: 0;
+        overflow-x: hidden;
+    }
+    .container-about-text{
+        margin: 1rem 4rem;
+    }
+    .lawer-card{
+        margin: 0 2rem 2rem 4rem;
+    }
+    .lawer-card-img{
+        height: 36rem;
+        width: 30rem;
+        margin-right: 4rem;
+    }
+    .lawer-card-name{
+        font-size: 1.3em;
+    }
+    .container-order-two{
+        margin-right: 2rem;
+    }
+    .lawer-card-list{
+        font-size: 1em;
+    }
+    .lawer-card-list > li{
+        margin: 1.2rem 2rem;
+    }
+    .lawer-card-h4, .lawer-card-p{
+        width: 30rem;
+    }
+    .lawer-card-p{
+        font-size: .95em;
+        line-height: 1.2rem;
+        margin-top: 1rem;
+    }
+    .testimonials-title, .testimonials-span{
+        margin: 0 4rem;
+    }
+    .testimonials-span{
+        margin-top: 3rem;
+    }
+    .testimonials-title{
+        font-size: 2em;
+        width: 30rem;
+        margin: .5rem 4rem 2rem 4rem;
     }
     #testimonialsContainer{
         padding: 0 3rem;
+    }
+    .arrow-slider{
+        top: 93%;
     }
     .arrow-slider:first-child{
         left: 2rem;
