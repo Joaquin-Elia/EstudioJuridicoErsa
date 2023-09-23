@@ -9,7 +9,43 @@
     /* typography */
     --principal-typo: 'DM Sans', sans-serif;
 }
-
+/* h1 > span, h2 > strong{
+    position: relative;
+    display: inline-block;
+}
+h1 > span::before, h2 > strong::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 60%;
+    left: 45%;
+    transform: translateX(-55%);
+    width: 75%;
+    height: 40%;
+    background-color: var(--first-color);
+} */
+/* h2 > strong{
+    position: relative;
+    display: inline-block;
+}
+h2 > strong::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 55%;
+    left: 37%;
+    transform: translateX(-35%);
+    width: 92%;
+    height: 65%;
+    background-color: var(--first-color);
+}
+.services-title > strong::before {
+    top: 65%;
+    left: 60%;
+    transform: translateX(-35%);
+    width: 58%;
+    height: 70%;
+} */
 /* dark mode */ 
 /* @media (prefers-color-scheme: dark) {
     :root{
