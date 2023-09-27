@@ -488,8 +488,9 @@ input[type=radio]:checked + label{
     font-weight: 700;
 }
 .footer-map{
-    width: 100%;
+    width: auto;
     height: 19rem;
+    margin: 1rem .5rem 0 .5rem;
 }
 .footer-info{
     background-color: var(--dark-color);
@@ -528,6 +529,9 @@ input[type=radio]:checked + label{
 .footer-location > svg{
     width: 2rem;
     height: 1.5rem;
+}
+.leaflet-container{
+    z-index: 1;
 }
 @media (min-width: 21rem) {
     .header{
@@ -686,6 +690,9 @@ input[type=radio]:checked + label{
     .footer-title, .footer-map{
         padding: .5rem .8rem;
     }
+    .footer-map{
+        margin: 1rem .8rem 0 .8rem;
+    }
     .footer-title{
         font-size: 1.5rem;
     }
@@ -814,6 +821,9 @@ input[type=radio]:checked + label{
         padding: .8rem 1rem;
         font-size: 1.6rem;
     }
+    .footer-map{
+        margin: 1rem 1rem 0 1rem;
+    }
     .footer-info{
         padding: 1.1rem 1rem;
     }
@@ -924,6 +934,7 @@ input[type=radio]:checked + label{
     }
     .footer-map{
         height: 25rem;
+        margin: 1rem 1.5rem 0 1.5rem;  
     }
     .footer-info{
         padding: 2rem 1.5rem;
@@ -985,6 +996,9 @@ input[type=radio]:checked + label{
         transition: opacity .5s;
     }
     .nav-link:hover::after{
+        opacity: 1;
+    }
+    .active-link::after{
         opacity: 1;
     }
     /* home */
@@ -1170,6 +1184,7 @@ input[type=radio]:checked + label{
     }
     .footer-map{
         width: 55vw;
+        margin: 1rem 0 0 0;
     }
     .footer-info{
         width: 45%;

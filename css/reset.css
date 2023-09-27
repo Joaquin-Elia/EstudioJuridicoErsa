@@ -54,12 +54,12 @@ h2 > strong::before{
     }
 } */
 /* high contrast */
-/* @media (prefers-contrast: high ) {
+@media (prefers-contrast: high ) {
     :root{
-        --primary-color: #3700ff;
-        --secondary-color: yellow;
+        --primary-color: #000;
+        --secondary-color: #ffff00;
     }
-} */
+}
 
 /* reset  */
 html, body, div, span, iframe,
@@ -74,7 +74,6 @@ header, nav, section, video, svg, path {
     box-sizing: border-box;
     vertical-align: baseline;
 }
-
 img, video, iframe, picture, figure{
     max-width: 100%;
     display: block;

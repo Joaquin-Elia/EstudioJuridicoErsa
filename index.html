@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Estudio Juridico EYS</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script defer type="module" src="./js/index.js"></script>
+    <meta name="description" content="Abogados en Azul, Buenos Aires. Especialistas en Accidentes de tránsito, Accidentes de trabajo, Despidos y Defensa del consumidor. Descubrí tus posibles indemnizaciones con nuestras calculadoras exclusivas">
+    <title>Estudio Juridico Erreguerena y Sabalúa en Azul</title>
 </head>
 <body>
     <header class="header">
@@ -19,19 +22,19 @@
         </a>
         <nav class="header-nav">
             <button class="header-close" id="closeBtn" aria-label="Cerrar menú">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                     <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
-                    </svg>
+                </svg>
             </button>
             <ul class="header-list">
-                <li><a href="#" class="nav-link">Inicio</a></li>
+                <li><a href="#" class="nav-link active-link">Inicio</a></li>
                 <li><a href="#servicios" class="nav-link">Servicios</a></li>
                 <li><a href="#calculadoras" class="nav-link">Calculadoras</a></li>
                 <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
             </ul>
         </nav>
         <button class="header-hamburger" id="hamburgerBtn" aria-label="Abrir menú">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
             </svg>
         </button>
@@ -46,8 +49,6 @@
                 </h1>
                 <div>
                     <p class="home-description">
-                        <!-- Brindamos asesoramiento personalizado para situaciones como 
-                        accidentes de trabajo, despidos, sucesiones, contratos y otras necesidades legales-->
                         Somos un equipo de abogados con amplia experiencia y formación.
                         Brindamos asesoramiento y representación para problemas legales <strong>en Azul y la zona</strong>.
                     </p>
@@ -85,7 +86,7 @@
                     <figure>
                         <img 
                             class="services-card-img"
-                            src="./assets/accidenteTrabajo.jpg" 
+                            src="./assets/accidenteTrabajo.webp" 
                             alt="Servicio para accidentes de trabajo"
                             loading="lazy"
                         >
@@ -102,7 +103,7 @@
                     <figure>
                         <img
                             class="services-card-img"
-                            src="./assets/accidenteTransito.jpg" 
+                            src="./assets/accidenteTransito.webp" 
                             alt="Servicio para accidentes de transito"
                             loading="lazy"
                         >
@@ -119,8 +120,8 @@
                     <figure>
                         <img 
                             class="services-card-img"
-                            src="./assets/despido.jpg" 
-                            alt="Servicio para despidos"
+                            src="./assets/despido.webp" 
+                            alt="Servicio ante despidos"
                             loading="lazy"
                         >
                     </figure>
@@ -137,8 +138,8 @@
                     <figure>
                         <img 
                             class="services-card-img"
-                            src="./assets/sucesion.jpg" 
-                            alt="Servicio para sucesiones"
+                            src="./assets/sucesion.webp" 
+                            alt="Servicio de sucesiones"
                             loading="lazy"
                         >
                     </figure>
@@ -154,8 +155,8 @@
                     <figure>
                         <img
                             class="services-card-img"
-                            src="./assets/defensaConsumidor2.jpg" 
-                            alt="Servicio para accidentes de transito"
+                            src="./assets/defensaConsumidor.webp" 
+                            alt="Servicio de defensa del consumidor"
                             loading="lazy"
                         >
                     </figure>
@@ -171,8 +172,8 @@
                     <figure>
                         <img
                             class="services-card-img"
-                            src="./assets/sumario.jpg" 
-                            alt="Servicio para accidentes de transito"
+                            src="./assets/sumario.webp" 
+                            alt="Servicio de defensa ante sumarios"
                             loading="lazy"
                         >
                     </figure>
@@ -268,10 +269,8 @@
                 <h2 class="about-title">
                     Sobre <strong>Nosotros</strong>
                 </h2>
-                <div class="">
-                    <p class="about-description">Nuestro estudio nace en el año 2018 con el propósito de <strong class="description-strong">brindar un servicio</strong> jurídico integral <strong class="description-strong">de calidad.</strong>
-                        <!-- Nuestra especialización es el derecho de fondo, complementado con una profundización en derecho procesal y en derecho administrativo. -->
-                    </p>
+                <div>
+                    <p class="about-description">Nuestro estudio nace en el año 2018 con el propósito de <strong class="description-strong">brindar un servicio</strong> jurídico integral <strong class="description-strong">de calidad.</strong></p>
                     <p class="about-description">No solo nos dedicamos a <strong class="description-strong">resolver casos</strong>, sino que también nos preocupamos por <strong class="description-strong">entender las necesidades y objetivos</strong> de cada situación.</p>
                     <p class="about-description">Nuestra <strong class="description-strong">filosofía</strong> se basa en la <strong class="description-strong">excelencia, </strong>la <strong class="description-strong">actualización</strong> y la <strong class="description-strong">cercanía</strong> con nuestros clientes.</p>
                 </div>
@@ -282,7 +281,8 @@
                     class="lawyer-card-img"
                     src="./assets/AbogadoLisandroErreguerena.jpg" 
                     alt="Dr. Lisandro Erreguerena"
-                    loading="lazy">
+                    loading="lazy"
+                >
                 <div>
                     <h3 class="lawyer-card-name">Dr. Lisandro Erreguerena</h3>
                     <ul class="lawyer-card-list">
@@ -301,7 +301,8 @@
                     class="lawyer-card-img" 
                     src="./assets/AbogadoFranciscoSabalua.jpeg" 
                     alt="Dr. Francisco Sabalúa"
-                    loading="lazy">
+                    loading="lazy"
+                >
                 <div class="container-order-two">
                     <h3 class="lawyer-card-name">Dr. Francisco M. Sabalúa</h3>
                     <ul class="lawyer-card-list">
@@ -348,25 +349,21 @@
     <footer class="footer">
         <div>
             <h2 class="footer-title"><strong>Contactános</strong></h2>
-            <iframe class="footer-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10748.779961765795!2d-59.865829719774766!3d-36.77940908222937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959427436149ed93%3A0x58c8b2e29d8b288e!2sEstudio%20Jur%C3%ADdico%20Erreguerena%20%26%20Sabal%C3%BAa%20%7C%20Abogados%20en%20Azul!5e0!3m2!1ses!2sar!4v1695238394198!5m2!1ses!2sar" tyle="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!-- <iframe class="footer-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10748.779961765795!2d-59.865829719774766!3d-36.77940908222937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959427436149ed93%3A0x58c8b2e29d8b288e!2sEstudio%20Jur%C3%ADdico%20Erreguerena%20%26%20Sabal%C3%BAa%20%7C%20Abogados%20en%20Azul!5e0!3m2!1ses!2sar!4v1695238394198!5m2!1ses!2sar" tyle="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+            <div id="map" class="footer-map"></div>
         </div>
         <section class="footer-info">
+            <!-- <h3>Estudio Juridico Erreguerena & Sabalúa | Abogados en Azul</h3> -->
             <div>
-                <h3 class="footer-h3">Nuestras redes sociales</h3>
-                <a class="footer-social" href="https://www.instagram.com/estudio.erreguerena.sabalua/" target="_blank" rel="noopener noreferrer">
+                <h3 class="footer-h3">Dirección</h3>
+                <div class="footer-location">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                     </svg>
-                    Instagram
-                </a>
-                <a class="footer-social" href="http://facebook.com" target="_blank" rel="noopener noreferrer">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-                    </svg>
-                    Facebook
-                </a>
+                    <a href="https://www.google.com/maps/place/Estudio+Jur%C3%ADdico+Erreguerena+%26+Sabal%C3%BAa+%7C+Abogados+en+Azul/@-36.7779323,-59.8624095,19.6z/data=!4m6!3m5!1s0x959427436149ed93:0x58c8b2e29d8b288e!8m2!3d-36.7778664!4d-59.8623067!16s%2Fg%2F11t68gjcr1?entry=ttu" target="_blank" rel="noopener noreferrer">Hipólito Yrigoyen 477, B7300 Azul, Provincia de Buenos Aires</a>
+                </div>
             </div>
-
             <div>
                 <h3 class="footer-h3">Teléfono</h3>
                 <div class="footer-phone">
@@ -377,14 +374,19 @@
                 </div>
             </div>
             <div>
-                <h3 class="footer-h3">Dirección</h3>
-                <div class="footer-location">
+                <h3 class="footer-h3">Nuestras redes sociales</h3>
+                <a class="footer-social" href="https://www.instagram.com/estudio.erreguerena.sabalua/" target="_blank" rel="noopener noreferrer">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
-                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
                     </svg>
-                    <p>Hipólito Yrigoyen 477, B7300 Azul, Provincia de Buenos Aires</p>
-                </div>
+                    Instagram
+                </a>
+                <a class="footer-social" href="https://www.facebook.com/estudiojuridicoersa/" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                    </svg>
+                    Facebook
+                </a>
             </div>
             <div>
                 <h3 class="footer-h3">Correo</h3>
@@ -398,7 +400,5 @@
         </section>
         
     </footer>
-
-    <script src="./js/index.js"></script>
 </body>
 </html>
