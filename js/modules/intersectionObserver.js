@@ -18,22 +18,26 @@ export class Observer {
     }
 }
 
+let testimonialsInitialized = false;
 const testimonialsCallback = () => {
-    import('./testimonials.js')
-    .then((module) => {
-        module.testimonials();
-    })
-    .catch((error) => {
-        console.error(`Error loading module: ${error}`);
-    });
+    if(!testimonialsInitialized){
+        import('./testimonials.js')
+        .then((module) => {
+            module.testimonials();
+            testimonialsInitialized = true;
+        })
+        .catch((error) => {
+            console.error(`Error loading module: ${error}`);
+        });
 
-    import('./carousel.js')
-    .then((module) => {
-        module.carousel();
-    })
-    .catch((error) => {
-        console.error(`Error loading module: ${error}`);
-    });
+        import('./carousel.js')
+        .then((module) => {
+            module.carousel();
+        })
+        .catch((error) => {
+            console.error(`Error loading module: ${error}`);
+        });
+    }
 }
 
 let mapInitialized = false;

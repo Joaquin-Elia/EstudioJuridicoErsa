@@ -84,10 +84,8 @@ export const calculator = () => {
         // Calcular los días trabajados del mes
         const workedDaysValue = (dismissalDate.getDate() * salaryDismissal) / 30;
     
-        // Calcular el total de la indemnización
         const totalIndemnization = Math.round(indemnizacionAntiguedad + indemnizacionPreaviso + vacationValue + proportionalVacationValue + aguinaldoValue + workedDaysValue);
         
-        // Mostrar el resultado en la página
         document.querySelector("#resultDismissal").innerHTML = `La indemnización es de: <strong style="font-size: 18px;">$${totalIndemnization.toLocaleString('es-AR')}</strong> pesos.`;
     });
 }
