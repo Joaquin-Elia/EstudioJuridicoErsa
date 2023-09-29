@@ -90,7 +90,7 @@ export const testimonials = () => {
                     "${quote}"
                 </blockquote>
                 <footer class="testimonial-footer">
-                    <img src="../assets/googleIcon.svg" class="google-icon" loading="lazy" alt="Logo de Google en referencia a testimonios">
+                    <img src="./assets/googleIcon.svg" class="google-icon" loading="lazy" alt="Logo de Google en referencia a testimonios">
                     <a  href="${link}"
                         target="_blank" 
                         rel="noopener noreferrer" 
